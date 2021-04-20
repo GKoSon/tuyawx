@@ -45,20 +45,20 @@
   </block>
 </view>
 <view class="wrap" style="width: 320px; height: 160px;">
-        <canvas canvas-id="chart" style="width: 320px; height: 150px;"></canvas>
+        <canvas canvas-id="chart" style="width: 320px; height: 150px; position: relative; left: 82rpx; top: -31rpx"></canvas>
 </view > 
-<button class='btnNavigation'  style="position: relative; left: 1rpx; top: 19rpx">
-    <image class='btnNavigationImg' src='../../../image/开关.png'></image>
+<button class='btnNavigation'  style="position: relative; left: 0rpx; top: -42rpx">
+    <image class='btnNavigationImg' src='../../../image/poweronoff.png'></image>
     <view>开关</view>
  </button>
 
   <button class='btnNavigation'  style="position: relative; left: -235rpx; top: -200rpx">
-    <image class='btnNavigationImg' src='../../../image/定时.png'></image>
+    <image class='btnNavigationImg' src='../../../image/timeing.png'></image>
     <view>定时</view>
  </button>
 
- <button class='btnNavigation'  style="position: relative; left: 241rpx; top: -418rpx">
-    <image class='btnNavigationImg' src='../../../image/用电量.png'></image>
+ <button class='btnNavigation'  style="position: relative; left: 239rpx; top: -355rpx">
+    <image class='btnNavigationImg' src='../../../image/powercount.png'></image>
     <view>用电量</view>
  </button>
 
