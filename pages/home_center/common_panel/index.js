@@ -35,16 +35,16 @@ tipsEnd: function() {
    * 页面的初始数据
    */
   data: {
-    device_name: "涂鸦智能",
+    device_name: "TYPower",
     titleItem: {
-      name: '智能单插',
+      name: 'tuyaPower',
       value: 'OPEN',
     },
     roDpList: {}, //只上报功能点
     rwDpList: {}, //可上报可下发功能点
     isRoDpListShow: false,
     isRwDpListShow: false,
-    forest: '../../../image/家.jpeg'
+    forest: '../../../image/backgronud.jpeg'
   },
 
   /**
