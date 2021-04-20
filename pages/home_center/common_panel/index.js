@@ -2,23 +2,49 @@
 import { getDevFunctions, getDeviceDetails, deviceControl } from '../../../utils/api/device-api'
 import wxMqtt from '../../../utils/mqtt/wxMqtt'
 
+const lineChart = require('./line-chart/index.js');
+let chart = null;
 
 Page({
+
+
+tipsStart: function(e) {
+    let x = e.changedTouches[0].x;
+
+    this.chartTipsShowing = true;
+    chart.tipsByX(x);
+},
+
+tipsMove: function(e) {
+    let x = e.changedTouches[0].x;
+
+    if (this.chartTipsShowing) {
+        chart.tipsByX(x);
+    }
+},
+
+tipsEnd: function() {
+    this.chartTipsShowing = false;
+    chart.clearTips();
+},
+
+
+
 
   /**
    * 页面的初始数据
    */
   data: {
-    device_name: '',
+    device_name: "涂鸦智能",
     titleItem: {
-      name: '',
-      value: '',
+      name: '智能单插',
+      value: 'OPEN',
     },
     roDpList: {}, //只上报功能点
     rwDpList: {}, //可上报可下发功能点
     isRoDpListShow: false,
     isRwDpListShow: false,
-    forest: '../../../image/forest@2x.png'
+    forest: '../../../image/家.jpeg'
   },
 
   /**
@@ -66,6 +92,25 @@ Page({
     const isRwDpListShow = Object.keys(rwDpList).length > 0
 
     this.setData({ titleItem, roDpList, rwDpList, device_name: name, isRoDpListShow, isRwDpListShow, roDpListLength, icon })
+
+
+
+    chart = lineChart.init('chart', {
+      tipsCtx: 'chart-tips',
+      width: 320,
+      height: 160,
+      margin: 10,
+      yUnit: 'W',
+      xAxis: ['10:10', '10:20', '10:30', '10:40', '10:50', '11:00', '11.10'],
+      lines: [{
+          color: '#505050',
+          points: [5, 6, 8, 6, 7, 4, 3]
+      }]
+    });
+    chart.draw();
+
+    
+
   },
 
   // 分离只上报功能点，可上报可下发功能点

@@ -2,10 +2,10 @@
 
 .common-panel-backgroud {
   position: absolute;
-  top: 0;
+  top: 60;
   left: 0;
   width: 100%;
-	height: 320px;
+	height: 220px;
 	background-color: #27c3d9;
 }
 
@@ -28,25 +28,25 @@
 	width: 160px;
   height: 25px;
   text-align: center;
-	font-family: HelveticaNeue;
-	font-size: 12px;
+	font-family: DINCondensed-Bold;
+	font-size: 30px;
   line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-	color: #fff;
+	color: rgb(14, 82, 209);
 }
 
 .common-panel-header-dpValue {
 	width: 114px;
-	height: 75px;
-  font-family: DINCondensed-Bold;
+	height: 60px;
+  font-family: HelveticaNeue;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: center;
-	font-size: 74px;
-	color: #fff;
+	font-size: 48px;
+	color: rgb(8, 202, 24);
 }
 
 .roDpItem-normal {
@@ -120,4 +120,27 @@
   padding: 16px 8px;
   width: auto;
   height: 100%;
+}
+
+.btnNavigation{
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25rpx;
+}
+
+.btnNavigationImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.btnNavigation::after {
+  border: 0; 
 }
